@@ -12,9 +12,9 @@ copy_file "#{__dir__}/examples/elm/hello_elm.js",
           "#{Webpacker.config.source_entry_path}/hello_elm.js"
 
 puts "Installing all elm dependencies"
-run "yarn add elm elm-webpack-loader"
-run "yarn add --dev elm-hot-loader"
-run "yarn run elm package install -- --yes"
+run "npm install elm elm-webpack-loader"
+run "npm install --save-dev elm-hot-loader"
+run "npx elm package install -- --yes"
 
 puts "Updating Webpack paths to include Elm file extension"
 insert_into_file Webpacker.config.config_path, "    - .elm\n", after: /extensions:\n/

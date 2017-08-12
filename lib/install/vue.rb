@@ -10,6 +10,6 @@ puts "Copying vue app file to #{Webpacker.config.source_entry_path}"
 copy_file "#{__dir__}/examples/vue/app.vue", "#{Webpacker.config.source_entry_path}/app.vue"
 
 puts "Installing all vue dependencies"
-run "yarn add vue vue-loader vue-template-compiler"
+run "npm install vue vue-loader vue-template-compiler"
 
 puts "Webpacker now supports vue.js 🎉"
